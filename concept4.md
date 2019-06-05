@@ -85,12 +85,20 @@ const ShowTheme = ({ theme }) => {
         color: 'black',
       }
       break;
-    case 'dark':
+    case 'light':
       bgStyle = {
-        backgroundColor: 'gray',
+        backgroundColor: 'yellow',
       }
       fontStyle = {
         color: 'black',
+      }
+      break;
+    case 'dark':
+      bgStyle = {
+        backgroundColor: 'black',
+      }
+      fontStyle = {
+        color: 'white',
       }
       break;
     default:
@@ -117,6 +125,10 @@ ShowTheme.propTypes = {
   theme: PropTypes.string
 }
 ```
+
+- jsFiddleを利用した例
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/cdvbxfpm/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 上のように、テーマの変更のファンクション自体やテーマのデータの保持は、ThemeContainerが保持しています。ShowThemeコンポーネントとThemeSwitcherコンポーネントは表示またはPropsで渡されたファンクションの呼び出しを行っています。
 
